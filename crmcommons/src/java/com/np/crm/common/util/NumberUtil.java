@@ -71,6 +71,21 @@ public class NumberUtil {
         DecimalFormat decimalFormat = new DecimalFormat(formatStr3);//格式化设置
         return decimalFormat.format(d);
     }
+    
+    /**
+	 * 转换成int
+	 * @param s
+	 * @param i
+	 * @return
+	 * @author zhiya.chai
+	 */
+	public static int parseInt(Object s, int i) {
+		try {
+			return Integer.parseInt(s.toString());
+		} catch (Exception e) {
+			return i;
+		}
+	}
 
     public static void main(String[] args) {
         BigDecimal bigDecimal = new BigDecimal("123123.1299999");
